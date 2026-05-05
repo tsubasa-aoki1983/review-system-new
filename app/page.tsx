@@ -124,7 +124,14 @@ key={star}
 onClick={() => setRating(star)}
 className="text-5xl"
 >
-{star <= rating ? "★" : "☆"}
+<span
+className={
+star <= rating ? "text-yellow-400" : "text-gray-300"
+}
+>
+★
+</span>
+
 </button>
 ))}
 </div>
