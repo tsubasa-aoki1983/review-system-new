@@ -17,6 +17,40 @@ const googleReviewUrl =
 
 const options = ["非常に満足", "満足", "普通", "不満足"];
 
+const handleSubmit = () => {
+setSubmitted(true);
+};
+
+if (submitted && rating >= 4) {
+return (
+<main className="min-h-screen bg-orange-50 flex items-center justify-center p-6">
+<div className="bg-white rounded-2xl shadow-lg p-6 max-w-md w-full text-center">
+<h1 className="text-2xl font-bold mb-4">
+ご来店ありがとうございます！🙏
+</h1>
+
+<p className="text-lg mb-6 leading-relaxed">
+あと30秒だけお願いします！
+<br />
+<br />
+① 下のボタンを押す
+<br />
+② Googleマップの「クチコミ」を開く
+<br />
+③ ★★★★★ をタップ
+<br />
+<br />
+スタッフの励みになります！
+</p>
+
+<a
+href={googleReviewUrl}
+target="_blank"
+rel="noopener noreferrer"
+className="block bg-red-500 text-white text-lg font-bold px-6 py-4 rounded-xl"
+>
+Googleで応援する
+</a>
 </div>
 </main>
 );
